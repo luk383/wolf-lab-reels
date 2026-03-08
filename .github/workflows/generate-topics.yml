@@ -1,0 +1,26 @@
+name: Generate Topics
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run topic generator
+        run: python scripts/generate_topics.py
+
+      - name: Upload generated topics
+        uses: actions/upload-artifact@v4
+        with:
+          name: reel-topics
+          path: output/topics.txt
