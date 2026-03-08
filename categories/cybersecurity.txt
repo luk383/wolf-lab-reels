@@ -1,1 +1,5 @@
-
+Top 3 cybersecurity mistakes developers make
+How hackers find vulnerable APIs
+What is a zero day vulnerability
+Common authentication vulnerabilities
+Why exposed API keys are dangerous
